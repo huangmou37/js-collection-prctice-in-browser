@@ -2,5 +2,5 @@
 
 function collectSameElements(collectionA, collectionB) {
   return collectionA.filter(
-    e => collectionB.filter(subArray => subArray.includes(e)).length > 0);
+    e => collectionB.some(subArray => subArray.includes(e)));
 }
