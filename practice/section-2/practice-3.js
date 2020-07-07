@@ -14,13 +14,9 @@ function countSameElements(collection) {
     }
   });
 
-  let countResultArray = [];
-
-  for (let e in countResultDict) {
-    countResultArray.push({name: e, summary: countResultDict[e]});
-  }
-
-  return countResultArray;
+  return Object.entries(countResultDict).map(entry => {
+    return {name: entry[0], summary: entry[1]};
+  });
 }
 
 function parseCnt(element) {
